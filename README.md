@@ -10,5 +10,6 @@ int houseRob(vector<int>& nums)
        for(i=n-2;i>=0;i--)
             for(j=i;j<n;j++)
                    memo[i]=max(memo[i],nums[j]+(j+2<n ? memo[j+2] : 0));
+       return memo[0];
   
   }
